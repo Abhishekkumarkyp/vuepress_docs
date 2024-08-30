@@ -1,8 +1,8 @@
 ---
 home: true
-heroImage: /images/logo_for_vue_pressjpg.jpg
-heroText: Hello Heros!
-tagline: Welcome to Doodle Press
+heroImage: /images/notebookLogo.webp
+heroText: Hello DoodleDwellers!
+tagline: Welcome to Doodle Press, Transforming Code into Knowledge
 actionText: Get Started →
 actionLink: /guide/
 features:
@@ -16,5 +16,5 @@ features:
   details: Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.
 - title: Performant
   details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
-footer: MIT Licensed | Copyright © 2018-present Evan You
+footer: MIT Licensed | Copyright © 2024-present Abhishek Kumar
 ---
