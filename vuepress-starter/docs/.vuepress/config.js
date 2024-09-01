@@ -11,7 +11,17 @@ module.exports = {
       //   // },
       //   // Add more components as needed
       // ]
-    }]
+    }],
+    // 'vuepress-plugin-code-copy',
+      ['vuepress-plugin-code-copy', {
+        align: 'top', // position of the copy button
+        // color: '#3eaf7c', // color of the copy button
+        // backgroundColor: '#ffffff', // background color of the copy button
+        successText: 'Copied!', // text that appears when code is successfully copied
+        // staticIcon: true, // keep the icon static or not
+        staticIcon: true, // Keep the icon static (does not change on hover)
+        iconClass: 'copy', // Custom icon class (e.g., from FontAwesome)
+      }],
   ],
   title: 'Doodle Press',
   description: 'Just playing around',
@@ -21,16 +31,19 @@ module.exports = {
   ],
   themeConfig: {
     docsDir: "packages/docs/docs",
+    searchPlaceholder: 'Search...',
+    smoothScroll: true,
     nav: [
       { text: 'Home', link: '/',
       },
       {
-        text: 'Languages',
-        ariaLabel: 'Language Menu',
+        text: 'AIML',
+        ariaLabel: 'AIML Menu',
         items: [
-          { text: 'English', link: '/language/english/' },
-          { text: 'Hindi', link: '/language/hindi/' },
-          { text: 'Japanese', link: '/language/japanese/' },
+          { text: 'SVM', link: '/aiml/svm' },
+          { text: 'Tree Model', link: '/aiml/treeModel' },
+          // { text: 'Hindi', link: '/language/hindi/' },
+          // { text: 'Japanese', link: '/language/japanese/' },
         ]
       },
       // { text: 'Guide', link: '/guide/' },
@@ -53,6 +66,13 @@ module.exports = {
         'frontend',
         'backend',
 
+      ],
+
+      
+      '/aiml/':[
+        '',
+        'svm',
+        'treeModel'
       ],
       // '/JavaScript/': [
       //   '',
@@ -81,10 +101,17 @@ module.exports = {
   // alias: {
   //   'styles': path.resolve(__dirname, './styles')
   // }
-  // extend: '@vuepress/theme-default',
-  // markdown: {
-  //   lineNumbers: true
-  // },
+  // theme: 'vuepress-theme-reco',
+  // theme: '@vuepress/theme-blog',
+  // extend: 'vuepress-theme-reco',
+  // extend: '@vuepress/vuepress-theme-reco',
+  extend: '@vuepress/theme-default',
+  markdown: {
+    lineNumbers: true
+  },
+  // extraCssFiles: [
+  //   '/styles/python-custom.css',
+  // ],
   
 
 }

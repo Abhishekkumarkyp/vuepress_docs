@@ -1,0 +1,61 @@
+/* Custom CSS for Python code snippets */
+
+/* General styling for code blocks */
+.theme-default-content pre[class*="language-python"] {
+    background-color: #f5f5f5; /* Light gray background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 15px; /* Padding inside the code block */
+    overflow-x: auto; /* Horizontal scroll for long lines */
+    font-size: 0.95em; /* Slightly smaller font size */
+    line-height: 1.5; /* Line height for better readability */
+  }
+  
+  /* Styling for inline code */
+  .theme-default-content code {
+    background-color: #f5f5f5; /* Same background color as code blocks */
+    border-radius: 3px; /* Rounded corners */
+    padding: 2px 4px; /* Padding inside inline code */
+    color: #d73a49; /* Python keyword color */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */
+  }
+  
+  /* Custom syntax highlighting */
+  .theme-default-content .token.comment {
+    color: #6a737d; /* Comment color */
+    font-style: italic; /* Italicize comments */
+  }
+  
+  .theme-default-content .token.keyword {
+    color: #d73a49; /* Keyword color */
+  }
+  
+  .theme-default-content .token.name.function,
+  .theme-default-content .token.name.class {
+    color: #6f42c1; /* Function and class names color */
+  }
+  
+  .theme-default-content .token.string {
+    color: #032f62; /* String literals color */
+  }
+  
+  .theme-default-content .token.number {
+    color: #005cc5; /* Numeric literals color */
+  }
+  
+  .theme-default-content .token.operator {
+    color: #e36209; /* Operators color */
+  }
+  
+  .theme-default-content .token.builtin {
+    color: #d73a49; /* Built-in functions and constants color */
+  }
+  
+  .theme-default-content .token.type {
+    color: #e36209; /* Type names color */
+  }
+  
+  .theme-default-content .token.escape {
+    color: #d73a49; /* Escape sequences color */
+  }
+  
