@@ -37,6 +37,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/',},
       { text: 'Git', link: '/gitdocs/',},
+      { text: 'VueJS', link: '/vuejs/',},
       {
         text: 'AIML',
         ariaLabel: 'AIML Menu',
@@ -76,6 +77,9 @@ module.exports = {
         'treeModel'
       ],
       '/gitdocs/':[
+        '',
+      ],
+      '/vuejs/':[
         '',
       ],
       // '/JavaScript/': [
