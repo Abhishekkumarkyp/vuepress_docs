@@ -14,8 +14,9 @@ module.exports = {
     }],
     // 'vuepress-plugin-code-copy',
       ['vuepress-plugin-code-copy', {
-        align: 'top', // position of the copy button
+        align: 'bottom', // position of the copy button
         // color: '#3eaf7c', // color of the copy button
+        color: '#27b1ff', // color of the copy button
         // backgroundColor: '#ffffff', // background color of the copy button
         successText: 'Copied!', // text that appears when code is successfully copied
         // staticIcon: true, // keep the icon static or not
@@ -34,8 +35,8 @@ module.exports = {
     searchPlaceholder: 'Search...',
     smoothScroll: true,
     nav: [
-      { text: 'Home', link: '/',
-      },
+      { text: 'Home', link: '/',},
+      { text: 'Git', link: '/gitdocs/',},
       {
         text: 'AIML',
         ariaLabel: 'AIML Menu',
@@ -73,6 +74,9 @@ module.exports = {
         '',
         'svm',
         'treeModel'
+      ],
+      '/gitdocs/':[
+        '',
       ],
       // '/JavaScript/': [
       //   '',
