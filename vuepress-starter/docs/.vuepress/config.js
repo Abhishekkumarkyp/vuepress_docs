@@ -38,14 +38,18 @@ module.exports = {
       { text: 'Home', link: '/',},
       { text: 'Git', link: '/gitdocs/',},
       { text: 'VueJS', link: '/vuejs/',},
+      { text: 'Productivity', ariaLabel: 'Productivity Menu',
+      items: [
+        { text: 'VS-Code ShortCut', link: '/productivity/vsCodeShortCut' },
+        { text: 'React Coding Environment', link: '/productivity/reactCodingEnvironment' },
+        { text: 'Tips', link: '/productivity/devloperPrdoductivity' },
+      ]},
       {
         text: 'AIML',
         ariaLabel: 'AIML Menu',
         items: [
           { text: 'SVM', link: '/aiml/svm' },
           { text: 'Tree Model', link: '/aiml/treeModel' },
-          // { text: 'Hindi', link: '/language/hindi/' },
-          // { text: 'Japanese', link: '/language/japanese/' },
         ]
       },
       // { text: 'Guide', link: '/guide/' },
@@ -81,6 +85,11 @@ module.exports = {
       ],
       '/vuejs/':[
         '',
+      ],
+      '/productivity/':[
+        'vsCodeShortCut',
+        'reactCodingEnvironment',
+        'devloperPrdoductivity'
       ],
       // '/JavaScript/': [
       //   '',
