@@ -296,3 +296,10 @@ Uninstall All Extensions in Bulk (One Liner):
 ```bash
 code --list-extensions | xargs -n 1 code --uninstall-extension
 ```
+```bash
+code --list-extensions | foreach { code --uninstall-extension $_ }
+```
+ To List all installed extensions in Vs Code
+```bash
+code --profile <profile-name> --list-extensions
+```

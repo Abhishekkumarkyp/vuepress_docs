@@ -1,0 +1,16 @@
+Manage Versions of images
+docker
+
+
+• What is Image Version?
+• How to make an Image Version?
+• Delete all Images and Container
+• Run the Docker container from terminal
+with version.
+
+
+docker build -t basic-app . // commant to create docker image
+
+docker build -t basic-app:v2 . // commant to create docker image verison v2 of basic-app
+
+docker run --name basic-app-container-v2 -p 5500:5500 basic-app:v2 // create container form image basic-app v2 and same time run that 

@@ -37,6 +37,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/',},
       { text: 'Git', link: '/gitdocs/',},
+      { text: 'DSA', link: '/dsa/',},
       { text: 'VueJS', link: '/vuejs/',},
       { text: 'Productivity', ariaLabel: 'Productivity Menu',
       items: [
@@ -82,6 +83,10 @@ module.exports = {
       ],
       '/gitdocs/':[
         '',
+        'divideAndConcuretop50'
+      ],
+      '/dsa/':[
+        '',
       ],
       '/vuejs/':[
         '',
@@ -97,8 +102,6 @@ module.exports = {
       //   'backend',
 
       // ],
-
-
 
       // fallback
       '/': [

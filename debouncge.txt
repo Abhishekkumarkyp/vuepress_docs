@@ -1,0 +1,45 @@
+A debounced input method is a way to delay the execution of a function (in this case, an input event handler) until a certain period of inactivity has passed. This is particularly useful when you have operations like API calls or heavy calculations that you don’t want to run every time the user types a character but rather when they stop typing for a specified amount of time (debouncing period).
+
+Explanation of Debouncing
+Without Debouncing: If you call a function on every keystroke, it gets triggered many times as the user types, potentially causing performance issues if the function involves expensive operations (e.g., API calls).
+With Debouncing: The function waits for the user to stop typing (e.g., 300 milliseconds). If the user continues typing, the timer resets, and the function only runs once after the typing has stopped.
+Example Scenario
+Let’s say you have an input field where the user can search for a product. You might want to call an API to get search results, but instead of calling the API every single time the user types a letter (which could lead to multiple, unnecessary calls), you use a debounced function that waits until the user has stopped typing for a set amount of time (like 300 milliseconds).
+
+
+<template>
+  <div>
+    <input v-model="searchQuery" @input="debouncedSearch" placeholder="Search products...">
+  </div>
+</template>
+
+<script>
+import _ from 'lodash';  // lodash for debouncing
+
+export default {
+  data() {
+    return {
+      searchQuery: ''
+    };
+  },
+  methods: {
+    // Debounce method using lodash
+    debouncedSearch: _.debounce(function() {
+      console.log('Searching for:', this.searchQuery);
+      // Your API call or search logic here
+    }, 300)  // 300 ms debounce time
+  }
+};
+</script>
+
+
+How It Works:
+Input Field: The user types in the input box bound to searchQuery.
+Debounced Function: The debouncedSearch method is debounced by 300 milliseconds. It will only execute when the user stops typing for 300ms.
+Lodash Debounce: The _.debounce function from Lodash ensures that the search logic is not called every time a key is pressed but only after the user finishes typing.
+Without Debouncing:
+If the user types “phone,” the search API might be called 5 times (once for each letter).
+
+With Debouncing:
+The API is called once, after the user finishes typing, resulting in a more efficient process and a better user experience.
+
