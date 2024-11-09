@@ -83,7 +83,6 @@ module.exports = {
       ],
       '/gitdocs/':[
         '',
-        'divideAndConcuretop50'
       ],
       '/dsa/':[
         '',
