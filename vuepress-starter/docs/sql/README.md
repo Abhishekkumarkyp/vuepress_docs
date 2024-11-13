@@ -1,4 +1,4 @@
-# Top 50 Questions of DBMS 
+# Top 40 Questions of DBMS 
 
 ### 1. What is a database management system (DBMS)?
 
