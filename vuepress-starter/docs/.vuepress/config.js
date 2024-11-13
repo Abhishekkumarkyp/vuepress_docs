@@ -38,6 +38,7 @@ module.exports = {
       { text: 'Home', link: '/',},
       { text: 'Git', link: '/gitdocs/',},
       { text: 'DSA', link: '/dsa/',},
+      { text: 'SQL', link: '/sql/',},
       { text: 'VueJS', link: '/vuejs/',},
       { text: 'Productivity', ariaLabel: 'Productivity Menu',
       items: [
@@ -85,6 +86,9 @@ module.exports = {
         '',
       ],
       '/dsa/':[
+        '',
+      ],
+      '/sql/':[
         '',
       ],
       '/vuejs/':[
