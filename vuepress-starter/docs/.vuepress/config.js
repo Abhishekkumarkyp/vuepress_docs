@@ -12,10 +12,10 @@ module.exports = {
     ['@vuepress/register-components', {
       // componentsDir: './path/to/components/global-components.js', // Directory containing your global components
       components: [
-        {
-          name: 'MyDocument',
-          path: './components/MyDocument.vue' // Path to your component
-        },
+        // {
+        //   name: 'MyDocument',
+        //   path: './components/MyDocument.vue' // Path to your component
+        // },
         // Add more components as needed
       ]
     }],
