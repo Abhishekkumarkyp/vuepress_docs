@@ -9,16 +9,12 @@ module.exports = {
   // plugins: ['@vuepress/active-header-links'],
   plugins: [
     ['@vuepress/active-header-links'],
-    ['@vuepress/register-components', {
-      // componentsDir: './path/to/components/global-components.js', // Directory containing your global components
-      components: [
-        // {
-        //   name: 'MyDocument',
-        //   path: './components/MyDocument.vue' // Path to your component
-        // },
-        // Add more components as needed
-      ]
-    }],
+  //   ['@vuepress/register-components', {
+  //     // componentsDir: './path/to/components/global-components.js', // Directory containing your global components
+    
+  //   }
+  
+  // ],
     // 'vuepress-plugin-code-copy',
       ['vuepress-plugin-code-copy', {
         align: 'bottom', // position of the copy button
