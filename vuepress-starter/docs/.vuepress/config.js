@@ -104,7 +104,6 @@ module.exports = {
       ],
       '/angular/':[
         '',
-        'mypage.vue'
       ],
       // '/mypage/':[
       //   '',
