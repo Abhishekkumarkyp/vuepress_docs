@@ -14,6 +14,7 @@
   "devDependencies": {
     "@vuepress/plugin-active-header-links": "^1.9.10",
     "@vuepress/plugin-register-components": "^1.9.10",
+    "@vuepress/utils": "^2.0.0-rc.2",
     "vuepress": "^1.9.10",
     "vuepress-plugin-code-copy": "^1.0.6"
   },

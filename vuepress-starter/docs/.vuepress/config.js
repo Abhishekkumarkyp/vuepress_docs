@@ -1,16 +1,23 @@
+// import { path } from '@vuepress/utils'
+
+// Resolve the path for a specific directory
+// const myPath = path.resolve(__dirname, 'my-directory')
+// console.log(myPath)
+
 module.exports = {
+  
   // plugins: ['@vuepress/active-header-links'],
   plugins: [
     ['@vuepress/active-header-links'],
     ['@vuepress/register-components', {
-      componentsDir: './path/to/components/global-components.js', // Directory containing your global components
-      // components: [
-      //   // {
-      //   //   name: 'V-Card',
-      //   //   path: './path/to/components/Card.vue' // Path to your component
-      //   // },
-      //   // Add more components as needed
-      // ]
+      // componentsDir: './path/to/components/global-components.js', // Directory containing your global components
+      components: [
+        {
+          name: 'MyDocument',
+          path: './components/MyDocument.vue' // Path to your component
+        },
+        // Add more components as needed
+      ]
     }],
     // 'vuepress-plugin-code-copy',
       ['vuepress-plugin-code-copy', {
@@ -23,6 +30,12 @@ module.exports = {
         staticIcon: true, // Keep the icon static (does not change on hover)
         iconClass: 'copy', // Custom icon class (e.g., from FontAwesome)
       }],
+      // [
+      //   '@vuepress/register-components',
+      //   {
+      //     componentsDir: path.resolve(__dirname, './components'),
+      //   },
+      // ],
   ],
   title: 'Doodle Press',
   description: 'Just playing around',
@@ -59,7 +72,9 @@ module.exports = {
       // { text: 'my-page', link: '/my-page' },
       // { text: 'Documentation', link: '/documentation/' },
       // { text: 'Documentation', link: '/docs/' },
-      { text: 'External Link', link: 'https://example.com' } // Custom link
+      { text: 'External Link', link: 'https://example.com' }, // Custom link
+      { text: 'My Page', link: '/mypage/' } // Ensure the link to /mypage/ is present
+
     ],
 
 
@@ -75,8 +90,6 @@ module.exports = {
         'backend',
 
       ],
-
-      
       '/aiml/':[
         '',
         'svm',
@@ -87,10 +100,19 @@ module.exports = {
       ],
       '/dsa/':[
         '',
+        'questions',
+        'sortingAlgorithms'
       ],
       '/sql/':[
         '',
       ],
+      '/angular/':[
+        '',
+        'mypage.vue'
+      ],
+      // '/mypage/':[
+      //   '',
+      // ],
       '/vuejs/':[
         '',
       ],
@@ -99,6 +121,8 @@ module.exports = {
         'reactCodingEnvironment',
         'devloperPrdoductivity'
       ],
+
+    
       // '/JavaScript/': [
       //   '',
       //   'frontend',
@@ -116,6 +140,16 @@ module.exports = {
       ],
 
     },
+    // Adding the custom route to 'MyPage.vue'
+  extraPages: [
+    {
+      path: '/mypage/',  // This will be your route URL
+      frontmatter: {
+        title: 'My Page'
+      },
+      component: './.vuepress/pages/MyPage.vue'
+    }
+  ]
     
   },
 
