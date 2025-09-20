@@ -1,0 +1,75 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>CSS Mastery — Chapter 8 Examples (Hacks & Filters)</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background:#f8fafc; color:#0f172a; margin:0; }
+    header { background:#e2e8f0; padding:1rem; border-bottom:1px solid #cbd5e1; }
+    main { max-width: 1000px; margin: 0 auto; padding:1rem; }
+    section { background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:1rem; margin:1rem 0; }
+    h1,h2 { margin-top:0; }
+    pre { background:#f1f5f9; padding:.5rem; border-radius:8px; overflow:auto; }
+    .box { width:180px; height:50px; display:flex; align-items:center; justify-content:center;
+           background:#e0e7ff; border:2px solid #6366f1; margin:.5rem 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CSS Mastery — Chapter 8 Hacks & Filters</h1>
+    <p>Demo of classic CSS hacks and modern alternatives.</p>
+  </header>
+  <main>
+    <section>
+      <h2>1) Conditional Comments (IE only)</h2>
+      <pre>&lt;!--[if IE]&gt;&lt;link rel="stylesheet" href="ie.css"&gt;&lt;![endif]--&gt;</pre>
+      <p>Modern browsers ignore these, but they were used to deliver IE-specific stylesheets.</p>
+    </section>
+
+    <section class="child-hack">
+      <h2>2) Child Selector Hack</h2>
+      <div class="box">Box with child selector padding</div>
+      <pre>html > body .child-hack .box { padding: 1rem; }</pre>
+    </section>
+
+    <section class="attr-hack">
+      <h2>3) Attribute Selector Hack</h2>
+      <a class="btn btn-primary" href="#">Primary Button</a>
+      <a class="btn" href="#">Plain Button</a>
+      <pre>a[class^="btn-"] { background:#2563eb; color:#fff; }</pre>
+    </section>
+
+    <section class="star-hack">
+      <h2>4) Star HTML Hack</h2>
+      <div class="box">Width 180px (modern)</div>
+      <pre>* html .star-hack .box { width:140px; }</pre>
+    </section>
+
+    <section class="underscore">
+      <h2>5) Underscore Hack</h2>
+      <div class="box">Height 50px</div>
+      <pre>.box { height:90px; _height:50px; }</pre>
+    </section>
+
+    <section class="escaped">
+      <h2>6) Escaped Property Hack</h2>
+      <div class="box">Width 180px</div>
+      <pre>.box { width:220px; w\idth:160px; }</pre>
+    </section>
+
+    <section class="tantek">
+      <h2>7) Tantek’s Box Model Hack</h2>
+      <div class="box">Demo Wrap (old IE saw 400px)</div>
+      <pre>.box { width:400px; voice-family:"\"}\""; voice-family:inherit; width:360px; }</pre>
+    </section>
+
+    <section class="supports">
+      <h2>8) Modern Alternative — Feature Queries</h2>
+      <div class="box">Turns green if Grid supported</div>
+      <pre>@supports (display:grid) { .box { background:#bbf7d0; } }</pre>
+    </section>
+  </main>
+</body>
+</html>

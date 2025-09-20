@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>CSS Mastery — Chapter 4 Examples</title>
+  <link rel="stylesheet" href="chapter4-examples.css"/>
+</head>
+<body>
+  <header class="page-header">
+    <h1>CSS Mastery — Chapter 4 Examples</h1>
+    <p class="subtitle">Link styling patterns: states, underlines, external icons, buttons, visited cues, and CSS tooltips</p>
+  </header>
+
+  <main>
+    <!-- 1) Link state order -->
+    <section>
+      <h2>1) Link States — LoVe:HAte order</h2>
+      <p>
+        <a href="#normal">Normal Link</a> |
+        <a href="#visited" class="visited-sim">Visited Link</a> |
+        <a href="#active" class="active-sim">Active Link</a>
+      </p>
+    </section>
+
+    <!-- 2) Custom underlines -->
+    <section>
+      <h2>2) Underlines & Borders</h2>
+      <p><a href="#" class="border-underline">Border underline link</a></p>
+      <p><a href="#" class="fancy-underline">Fancy background underline</a></p>
+    </section>
+
+    <!-- 3) Attribute selectors -->
+    <section>
+      <h2>3) Attribute Selectors — External & Protocol Links</h2>
+      <ul>
+        <li><a href="http://external.com">External Site</a></li>
+        <li><a href="mailto:test@example.com">Email us</a></li>
+        <li><a href="doc.pdf">Download PDF</a></li>
+      </ul>
+    </section>
+
+    <!-- 4) Button-style links -->
+    <section>
+      <h2>4) Links as Buttons</h2>
+      <a href="#" class="button">Simple Button</a>
+      <a href="#" class="roll">Image Rollover</a>
+      <a href="#" class="sprite">Sprite Button</a>
+    </section>
+
+    <!-- 5) Visited link cues -->
+    <section>
+      <h2>5) Visited Link Indicators</h2>
+      <p><a href="#visited" class="visited-cue">Link with checkmark when visited</a></p>
+    </section>
+
+    <!-- 6) Pure CSS Tooltips -->
+    <section>
+      <h2>6) Pure CSS Tooltips</h2>
+      <p><a href="#" class="tooltip">Hover me<span>This is the tooltip text</span></a></p>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>Study demo · CSS Mastery Ch.4</p>
+  </footer>
+</body>
+</html>

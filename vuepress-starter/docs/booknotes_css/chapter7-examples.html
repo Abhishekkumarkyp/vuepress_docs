@@ -1,0 +1,188 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>CSS Mastery — Chapter 7 Examples (Layouts)</title>
+  <style>
+  :root { --ink:#0f172a; --muted:#475569; --bg:#f8fafc; --card:#ffffff; --border:#e2e8f0; --brand:#2563eb; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--ink); background:var(--bg); }
+  header.page { position: sticky; top: 0; background:#e2e8f0; padding: .8rem 1rem; z-index: 10; border-bottom:1px solid var(--border); }
+  main { max-width: 1100px; margin: 0 auto; padding: 1rem; }
+  section { background: var(--card); border:1px solid var(--border); border-radius: 12px; padding: 1rem; margin: 1rem 0; }
+  h1,h2 { margin: .25rem 0 .6rem; }
+  .note { color: var(--muted); font-size: .95rem; margin-top: .2rem; }
+  code, pre { background:#f1f5f9; border-radius: 8px; }
+  pre { padding:.6rem .8rem; overflow:auto; }
+
+  /* Utilities */
+  .box { background:#eef2ff; border:1px solid #c7d2fe; border-radius:10px; padding:.6rem; }
+  .box.alt { background:#dcfce7; border-color:#bbf7d0; }
+  .box.warn { background:#fee2e2; border-color:#fecaca; }
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 1rem; }
+  .demo-title { font-weight:700; margin:.2rem 0 .6rem; color:#334155; }
+
+  /* 1) Float-based columns (legacy) */
+  .floats { border-radius: 10px; overflow: hidden; }
+  .floats .col { float:left; width:50%; padding:.6rem; }
+  .floats::after { content:""; display: table; clear: both; }
+
+  /* 2) Positioning: absolute & sticky inside a relative container */
+  .pos-wrap { position: relative; min-height: 180px; padding:1rem; background: #fff7ed; border:1px dashed #f59e0b; border-radius: 12px; }
+  .pos-wrap .abs { position:absolute; right: 12px; bottom: 12px; background:#fbcfe8; border:1px solid #f472b6; padding:.4rem .6rem; border-radius:8px; }
+  .sticky-demo { position: sticky; top: 0; background:#fff; border:1px solid var(--border); padding:.3rem .6rem; border-radius:8px; }
+
+  /* 3) Flexbox multi-column layout */
+  .flex-wrap { display:flex; gap: 1rem; align-items: stretch; flex-wrap: wrap; }
+  .flex-wrap .side { flex: 1 1 200px; }
+  .flex-wrap .main { flex: 3 1 420px; min-width: 0; }
+  .chip { display:inline-block; background:#e2e8f0; padding:.15rem .5rem; border-radius:999px; margin-right:.25rem; }
+
+  /* 4) Grid layout (2D) */
+  .grid-wrap { display:grid; grid-template-columns: 200px 1fr 200px; grid-template-rows: auto 1fr auto; gap: 1rem; min-height: 280px; }
+  .grid-wrap > header { grid-column: 1 / -1; }
+  .grid-wrap > footer { grid-column: 1 / -1; }
+  .grid-wrap > .main { grid-column: 2; }
+  .grid-wrap > .left { grid-column: 1; }
+  .grid-wrap > .right { grid-column: 3; }
+
+  /* 5) Responsive: stack flex on small screens */
+  @media (max-width: 768px) {
+    .flex-wrap { flex-direction: column; }
+  }
+
+  /* 6) Holy Grail layout (Flex & Grid) */
+  .holy { display:flex; flex-wrap: wrap; gap: 1rem; }
+  .holy > header, .holy > footer { flex: 1 0 100%; }
+  .holy > nav    { flex: 0 0 200px; }
+  .holy > main   { flex: 1 1 0; min-width: 0; }
+  .holy > aside  { flex: 0 0 200px; }
+
+  .holy-grid { display:grid; grid-template-columns: 200px 1fr 200px; grid-template-rows: auto 1fr auto; gap: 1rem; }
+  .holy-grid header, .holy-grid footer { grid-column: 1 / -1; }
+  .holy-grid main { grid-column: 2; }
+
+  /* 7) Centering patterns */
+  .centered { max-width: 680px; margin-inline: auto; }
+  .center-flex { display:flex; justify-content:center; align-items:center; min-height: 120px; }
+  .center-grid { display:grid; place-items:center; min-height: 120px; }
+  </style>
+</head>
+<body>
+  <header class="page">
+    <h1>CSS Mastery — Chapter 7 Examples</h1>
+    <p class="note">Float layouts, positioning, Flexbox, Grid, responsive stacking, Holy Grail, and centering patterns.</p>
+  </header>
+
+  <main>
+    <!-- 1) Float-based layout -->
+    <section>
+      <h2>1) Floats (legacy)</h2>
+      <p class="note">Two columns via <code>float: left</code>; clearfix applied.</p>
+      <div class="floats">
+        <div class="col"><div class="box">Float column A — Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div></div>
+        <div class="col"><div class="box alt">Float column B — Vivamus vehicula, sapien eu volutpat tempor.</div></div>
+      </div>
+      <pre><code>.floats::after { content:""; display:table; clear:both; }
+.floats .col { float:left; width:50%; }</code></pre>
+    </section>
+
+    <!-- 2) Positioning -->
+    <section>
+      <h2>2) Positioning (relative / absolute / sticky)</h2>
+      <div class="pos-wrap">
+        <div class="sticky-demo">I stick to the top inside this container</div>
+        <p>Scroll the page a bit to see the header above remain in view. This container is <strong>relative</strong>, the pink label is <strong>absolute</strong> at bottom-right.</p>
+        <div class="abs">Absolutely positioned</div>
+      </div>
+    </section>
+
+    <!-- 3) Flexbox -->
+    <section>
+      <h2>3) Flexbox Multi-Column</h2>
+      <div class="flex-wrap">
+        <aside class="box side"><span class="demo-title">Sidebar</span><br><span class="chip">filter</span><span class="chip">tags</span><span class="chip">archives</span></aside>
+        <main class="box main"><span class="demo-title">Main content</span><br>Flex grows to fill remaining space. Add long content to test overflow behavior and <code>min-width:0</code>.</main>
+        <aside class="box alt side"><span class="demo-title">Aside</span><br>Related links and ads.</aside>
+      </div>
+      <pre><code>.flex-wrap { display:flex; gap:1rem; flex-wrap:wrap; }
+.side { flex:1 1 200px; } /* grows/shrinks */
+.main { flex:3 1 420px; min-width:0; }</code></pre>
+    </section>
+
+    <!-- 4) Grid -->
+    <section>
+      <h2>4) Grid Page Skeleton (2D)</h2>
+      <div class="grid-wrap">
+        <header class="box">Header</header>
+        <nav class="box left">Left sidebar</nav>
+        <article class="box main">Main article area</article>
+        <aside class="box right">Right sidebar</aside>
+        <footer class="box">Footer</footer>
+      </div>
+      <pre><code>.grid-wrap {
+  display:grid;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
+}</code></pre>
+    </section>
+
+    <!-- 5) Responsive stacking -->
+    <section>
+      <h2>5) Responsive Stacking</h2>
+      <p class="note">Shrink viewport &lt; 768px to see Flexbox stack vertically using a media query.</p>
+      <div class="flex-wrap">
+        <div class="box side">Card A</div>
+        <div class="box main">Card B (grows)</div>
+        <div class="box side">Card C</div>
+      </div>
+      <pre><code>@media (max-width: 768px) {
+  .flex-wrap { flex-direction: column; }
+}</code></pre>
+    </section>
+
+    <!-- 6) Holy Grail -->
+    <section>
+      <h2>6) “Holy Grail” Layout</h2>
+      <div class="grid-2">
+        <div>
+          <div class="demo-title">Flex version</div>
+          <div class="holy">
+            <header class="box">Header</header>
+            <nav class="box">Nav</nav>
+            <main class="box">Main</main>
+            <aside class="box">Aside</aside>
+            <footer class="box">Footer</footer>
+          </div>
+        </div>
+        <div>
+          <div class="demo-title">Grid version</div>
+          <div class="holy-grid">
+            <header class="box">Header</header>
+            <nav class="box">Nav</nav>
+            <main class="box">Main</main>
+            <aside class="box">Aside</aside>
+            <footer class="box">Footer</footer>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7) Centering patterns -->
+    <section>
+      <h2>7) Centering Patterns</h2>
+      <div class="grid-2">
+        <div class="centered box">Centered block with <code>margin-inline:auto</code></div>
+        <div class="center-flex box">Flex centered</div>
+        <div class="center-grid box">Grid centered</div>
+      </div>
+      <pre><code>.centered { max-width: 680px; margin-inline: auto; }
+.center-flex { display:flex; justify-content:center; align-items:center; }
+.center-grid { display:grid; place-items:center; }</code></pre>
+    </section>
+  </main>
+</body>
+</html>

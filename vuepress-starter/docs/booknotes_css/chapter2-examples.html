@@ -1,0 +1,76 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>CSS Mastery — Chapter 2 Examples</title>
+  <style>
+  body { font:16px/1.5 system-ui, sans-serif; margin:0; background:#f8fafc; color:#111; }
+  .page-header,.page-footer { padding:1rem; background:#e2e8f0; text-align:center; }
+  main { padding:1rem; max-width:900px; margin:0 auto; }
+  section { background:#fff; padding:1rem; margin:1rem 0; border-radius:8px; border:1px solid #e2e8f0; }
+
+  .box { background:#bfdbfe; border:2px solid #2563eb; padding:1rem; margin:.5rem; }
+  .inline { display:inline; background:#fecaca; border:1px solid #b91c1c; padding:.25rem; }
+  .float-left { float:left; width:120px; height:80px; background:#bbf7d0; border:2px solid #16a34a; margin:.5rem; }
+  .clearfix::after { content:""; display:block; clear:both; }
+  .relative { position:relative; background:#fde68a; border:2px dashed #ca8a04; height:120px; }
+  .absolute { position:absolute; top:20px; left:20px; width:100px; height:60px; background:#fbcfe8; border:2px solid #be185d; }
+  .fixed { position:fixed; bottom:10px; right:10px; background:#ddd6fe; border:2px solid #7c3aed; padding:.5rem; }
+  .collapsed p { margin:20px 0; background:#e0f2fe; }
+  .collapsed p + p { background:#bae6fd; }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <h1>CSS Mastery — Chapter 2 Examples</h1>
+    <p class="subtitle">Visual Formatting Model concepts</p>
+  </header>
+
+  <main>
+    <!-- 1) Block vs Inline -->
+    <section>
+      <h2>1) Block vs Inline Elements</h2>
+      <div class="box">I am a block-level box. I span full width.</div>
+      <p>This paragraph contains <span class="inline">an inline span</span> that flows with text.</p>
+    </section>
+
+    <!-- 2) Normal flow and floats -->
+    <section>
+      <h2>2) Normal Flow vs Floats</h2>
+      <div class="float-left">I am floated left</div>
+      <p>Paragraph text wraps around me because I’m floated. Other content follows.</p>
+      <div class="clearfix"></div>
+      <p>After clearfix, layout continues normally.</p>
+    </section>
+
+    <!-- 3) Containing blocks & positioning -->
+    <section>
+      <h2>3) Containing Blocks & Positioning</h2>
+      <div class="relative">
+        <div class="absolute">Absolutely positioned box</div>
+        This yellow box is relative; the pink box is positioned absolutely 20px from top-left of it.
+      </div>
+    </section>
+
+    <!-- 4) Fixed positioning -->
+    <section>
+      <h2>4) Fixed Positioning</h2>
+      <p>Scroll the page and notice the fixed box stays in place.</p>
+      <div class="fixed">I’m fixed to bottom-right</div>
+    </section>
+
+    <!-- 5) Margin collapsing -->
+    <section class="collapsed">
+      <h2>5) Margin Collapsing</h2>
+      <p>First paragraph with 20px margin top & bottom.</p>
+      <p>Second paragraph with 20px margin too — notice combined margin collapse (not 40px).</p>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>Study demo · CSS Mastery Ch.2</p>
+  </footer>
+</body>
+</html>

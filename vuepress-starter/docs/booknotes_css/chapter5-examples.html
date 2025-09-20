@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en" id="services">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>CSS Mastery — Chapter 5 Examples</title>
+  <link rel="stylesheet" href="chapter5-examples.css"/>
+</head>
+<body class="ch5 services">
+  <header class="page-header">
+    <h1>CSS Mastery — Chapter 5 Examples</h1>
+    <p class="subtitle">Lists, Nav Bars, Sliding Doors (legacy), CSS Image Maps & Remote Rollovers</p>
+  </header>
+
+  <main>
+    <!-- 1) Custom bullets + reset -->
+    <section id="list-reset">
+      <h2>1) List Reset & Custom Bullets</h2>
+      <p class="note">We remove default list styles and add custom bullets via background.</p>
+      <ul class="custom-bullets">
+        <li>Read emails</li>
+        <li>Write report that may wrap to a second line when the viewport is narrow</li>
+        <li>Plan sprint backlog</li>
+      </ul>
+    </section>
+
+    <!-- 2) Vertical navigation (sprite-like hover) -->
+    <section id="nav-vertical">
+      <h2>2) Vertical Navigation</h2>
+      <nav aria-label="Site">
+        <ul id="mainNav" class="nav-vertical">
+          <li class="home"><a href="#" >Home</a></li>
+          <li class="about"><a href="#">About</a></li>
+          <li class="services"><a href="#" aria-current="page">Services</a></li>
+          <li class="contact"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <p class="note">Active item is highlighted using body scope (<code>body.services</code> + <code>li.services a</code>).</p>
+    </section>
+
+    <!-- 3) Horizontal nav: float-based -->
+    <section id="nav-horizontal-floats">
+      <h2>3) Horizontal Navigation — Floats (legacy)</h2>
+      <ul class="nav-horizontal legacy-floats">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Clients</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="clearfix-spacer"></div>
+    </section>
+
+    <!-- 4) Horizontal nav: Flexbox (modern) -->
+    <section id="nav-horizontal-flex">
+      <h2>4) Horizontal Navigation — Flexbox (modern)</h2>
+      <ul class="nav-flex modern-flex">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </section>
+
+    <!-- 5) Sliding Doors tabs (legacy pattern, simulated) -->
+    <section id="sliding-doors">
+      <h2>5) Sliding Doors Tabs (Legacy Technique)</h2>
+      <ul class="tabs sliding-doors">
+        <li class="active"><a href="#">Overview</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+      <p class="note">Now using a faithful two-sprite approach (left cap on <code>&lt;a&gt;</code>, right cap on <code>&lt;li&gt;</code>) so tabs stretch with text.</p>
+    </section>
+
+    <!-- 6) Pure CSS image map -->
+    <section id="css-image-map">
+      <h2>6) Pure CSS Image Map</h2>
+      <div id="team-photo" class="photo-map" role="group" aria-label="Team photo with person hotspots">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NDAiIGhlaWdodD0iMzYwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZWVmMmZmIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2RiZWFmZSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSIzNjAiIGZpbGw9InVybCgjYmcpIi8+CiAgPGcgZm9udC1mYW1pbHk9InN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgU2Vnb2UgVUksIFJvYm90bywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzBmMTcyYSI+CiAgICA8cmVjdCB4PSI3MCIgeT0iNjAiIHdpZHRoPSIxMjAiIGhlaWdodD0iMTQwIiByeD0iOCIgZmlsbD0iI2JmZGJmZSIgc3Ryb2tlPSIjNjBhNWZhIi8+CiAgICA8dGV4dCB4PSIxMzAiIHk9IjE0MCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QWxpY2U8L3RleHQ+CiAgICA8cmVjdCB4PSIyNjAiIHk9Ijc1IiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjEzMCIgcng9IjgiIGZpbGw9IiNmZWNhY2EiIHN0cm9rZT0iI2Y4NzE3MSIvPgogICAgPHRleHQgeD0iMzE1IiB5PSIxNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkJvYjwvdGV4dD4KICAgIDxyZWN0IHg9IjQzMCIgeT0iNjUiIHdpZHRoPSIxMzAiIGhlaWdodD0iMTUwIiByeD0iOCIgZmlsbD0iI2JiZjdkMCIgc3Ryb2tlPSIjNGFkZTgwIi8+CiAgICA8dGV4dCB4PSI0OTUiIHk9IjE0MCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q2FybGE8L3RleHQ+CiAgPC9nPgogIDx0ZXh0IHg9IjMyMCIgeT0iMzMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMzM0MTU1Ij5UZWFtIOKAlCBQbGFjZWhvbGRlciBJbWFnZTwvdGV4dD4KPC9zdmc+" alt="Team placeholder" width="640" height="360"/>
+        <ul class="hotspots">
+          <li class="alice"><a href="#alice"><span class="note">Alice — Project Manager</span></a></li>
+          <li class="bob"><a href="#bob"><span class="note">Bob — Frontend</span></a></li>
+          <li class="carla"><a href="#carla"><span class="note">Carla — QA</span></a></li>
+        </ul>
+      </div>
+      <p class="note">Hover the regions to see outlines and tooltip notes; notes are visually hidden off-canvas until hover.</p>
+    </section>
+
+    <!-- 7) Remote rollovers -->
+    <section id="remote-rollovers">
+      <h2>7) Remote Rollovers (Coordinated Hover)</h2>
+      <div class="remote-wrap">
+        <a class="remote" href="#project">
+          <span class="hotspot" aria-hidden="true"></span>
+          <span class="label">Project Alpha</span>
+        </a>
+        <a class="remote" href="#projectb">
+          <span class="hotspot" aria-hidden="true"></span>
+          <span class="label">Project Beta</span>
+        </a>
+      </div>
+      <p class="note">Hover either the hotspot box or the label — both update via a shared <code>:hover</code> on the same anchor.</p>
+    </section>
+
+    <!-- 8) Definition list note -->
+    <section id="definition-lists">
+      <h2>8) Definition Lists — Use Responsibly</h2>
+      <dl class="demo-dl">
+        <dt>Term</dt>
+        <dd>Definition goes here. Prefer using lists for menus; use definition lists for actual terms/definitions.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>Study demo &middot; CSS Mastery Ch.5</p>
+  </footer>
+</body>
+</html>

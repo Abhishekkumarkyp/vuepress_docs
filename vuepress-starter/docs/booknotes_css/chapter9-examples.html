@@ -1,0 +1,128 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>CSS Mastery — Chapter 9 Examples (Web Typography)</title>
+
+  <!-- Fast & safe web font loading (optional at runtime) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet">
+
+  <style>
+  :root{
+    --ink:#0f172a;--muted:#475569;--bg:#f8fafc;--card:#fff;--border:#e2e8f0;
+    --sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    /* Fluid type scale */
+    --step--1: clamp(.82rem, .82rem + .1vw, .9rem);
+    --step-0:  clamp(1.00rem, 1rem + .2vw, 1.125rem);
+    --step-1:  clamp(1.25rem, 1.15rem + .8vw, 1.5rem);
+    --step-2:  clamp(1.5rem,  1.3rem + 1.4vw, 1.875rem);
+    --step-3:  clamp(1.85rem, 1.6rem + 2vw,  2.25rem);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font:16px/1.6 var(--sans);background:var(--bg);color:var(--ink)}
+  header.page{position:sticky;top:0;background:#e2e8f0;border-bottom:1px solid var(--border);padding:1rem;z-index:5}
+  main{max-width:900px;margin:0 auto;padding:1rem}
+  section{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem;margin:1rem 0}
+  h1{font-size:var(--step-3);line-height:1.2;margin:.2rem 0 .6rem;text-wrap:balance}
+  h2{font-size:var(--step-2);line-height:1.25;margin:.2rem 0 .5rem;text-wrap:balance}
+  p{font-size:var(--step-0);line-height:1.6}
+  small{font-size:var(--step--1)}
+  .note{color:var(--muted);font-size:.95rem}
+  .prose{max-width:70ch;hyphens:auto;text-wrap:pretty;hanging-punctuation:first allow-end}
+  .balanced{ text-wrap: balance; }
+  code, pre{font-family:var(--mono);background:#f1f5f9;border-radius:8px}
+  pre{padding:.6rem .8rem;overflow:auto}
+  .data{font-variant-numeric:tabular-nums lining-nums}
+  .lead{font-size:var(--step-1);color:#334155}
+  .dropcap::first-letter{float:left;font-size:3.2em;line-height:.9;padding:.05em .1em 0 0;font-weight:700}
+  .specimens{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+  .card{border:1px solid var(--border);border-radius:10px;padding:.8rem;background:#fff}
+  .muted{color:var(--muted)}
+  .chips{display:flex;flex-wrap:wrap;gap:.35rem}
+  .chip{background:#e2e8f0;border-radius:999px;padding:.1rem .5rem;font-size:.85rem}
+  .vars h3{margin:.4rem 0 .2rem}
+  .vars p{margin:.2rem 0}
+  </style>
+</head>
+<body>
+  <header class="page">
+    <h1>CSS Mastery — Chapter 9: Web Typography</h1>
+    <p class="note">Fluid type, measure & leading, ligatures, hyphenation, variable fonts, numeric features, and font loading.</p>
+  </header>
+
+  <main>
+    <!-- 1) Fluid scale + measure -->
+    <section class="prose">
+      <h2 class="balanced">1) Fluid scale, comfortable measure, and leading</h2>
+      <p class="lead">This paragraph uses a fluid type scale via <code>clamp()</code> and a readable line-length (≈60–70ch). Resize your window to see smooth scaling.</p>
+      <p class="dropcap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus, nibh vitae euismod ultrices, magna velit dapibus neque, vitae sodales lacus velit a nunc. Mauris quis arcu id erat facilisis rhoncus. Integer semper mi a dui viverra, in aliquet quam vulputate.</p>
+    </section>
+
+    <!-- 2) Ligatures, kerning, small caps -->
+    <section class="prose">
+      <h2>2) Ligatures, kerning, and caps</h2>
+      <div class="chips">
+        <span class="chip">font-kerning</span>
+        <span class="chip">font-variant-ligatures</span>
+        <span class="chip">font-variant-caps</span>
+      </div>
+      <p style="font-kerning:normal;font-variant-ligatures:common-ligatures contextual;">
+        Affable office — notice how “ff” and “fi” ligatures render in supporting fonts.
+      </p>
+      <p style="font-variant-caps: small-caps;">Small caps example: css mastery notes</p>
+    </section>
+
+    <!-- 3) Numeric features -->
+    <section class="prose">
+      <h2>3) Tabular vs proportional numerals</h2>
+      <p class="muted">Tabular numbers align neatly in columns (great for UI, timers, prices).</p>
+      <div class="specimens">
+        <div class="card">
+          <h3>Proportional (default)</h3>
+          <p>12:34:56</p>
+          <p>$9,999.00</p>
+        </div>
+        <div class="card data">
+          <h3>Tabular (lined)</h3>
+          <p>12:34:56</p>
+          <p>$9,999.00</p>
+        </div>
+      </div>
+      <pre><code>.data { font-variant-numeric: tabular-nums lining-nums; }</code></pre>
+    </section>
+
+    <!-- 4) Variable font axes demo -->
+    <section class="prose vars">
+      <h2>4) Variable fonts — axes</h2>
+      <p class="muted">If the active font supports axes, you can tweak weight and optical size.</p>
+      <h3>Display title</h3>
+      <p style="font-variation-settings:'wght' 750, 'opsz' 32;">Variable font heavy title (wght 750, opsz 32)</p>
+      <h3>Body text</h3>
+      <p style="font-variation-settings:'wght' 400, 'opsz' 14;">Running text tuned for smaller optical size (wght 400, opsz 14)</p>
+      <pre><code>h1 { font-variation-settings: "wght" 700, "opsz" 32; }
+p  { font-variation-settings: "wght" 400, "opsz" 14; }</code></pre>
+    </section>
+
+    <!-- 5) Hyphenation & language -->
+    <section class="prose">
+      <h2>5) Hyphenation & language-aware breaks</h2>
+      <p>LongGermanCompoundWordLongGermanCompoundWordLongGermanCompoundWord will break with <code>hyphens:auto</code> when appropriate.</p>
+      <pre><code>.prose { hyphens: auto; }
+&lt;html lang="en"&gt; ...</code></pre>
+    </section>
+
+    <!-- 6) Loading strategy -->
+    <section class="prose">
+      <h2>6) Font loading without FOIT</h2>
+      <p>We linked Inter with <code>display=swap</code> so the browser shows fallback text immediately and swaps once the font is ready.</p>
+      <pre><code>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet"&gt;</code></pre>
+    </section>
+  </main>
+</body>
+</html>
