@@ -1,31 +1,41 @@
-# backend guide
-     this is a backend guide
+---
+title: Backend Guide
+---
 
+# Backend Guide
 
-## Main backend guide
-  this is main backend guide
+This guide covers backend-related setup and concepts for the project.
 
+## Overview
+
+While VuePress itself is a static site generator with no backend, projects often
+need a backend for things like search, contact forms, or dynamic content. This page
+collects notes and conventions for backend work related to this project.
 
 ## Getting Started
 
-To get started with our project, follow these steps:
-
-1. **Installation**: First, install the project dependencies.
+1. **Installation**: Install the project dependencies.
 
     ```bash
     npm install
     ```
 
-2. **Development Server**: Start the development server.
+2. **Development Server**: Start the local development server.
 
     ```bash
-    npm run dev
+    npm run docs:dev
     ```
 
-3. **View in Browser**: Open your browser and navigate to [http://localhost:8080/](http://localhost:8080/) to view the project.
+3. **View in Browser**: Open your browser and navigate to
+   [http://localhost:8080/](http://localhost:8080/) to view the site.
 
-## Project Structure
+## Building for Production
 
-Our project follows a typical Vue.js project structure:
+To generate a static production build:
 
-## **New Heading
+```bash
+npm run docs:build
+```
+
+The output is written to `docs/.vuepress/dist` and can be deployed to any static
+hosting provider.

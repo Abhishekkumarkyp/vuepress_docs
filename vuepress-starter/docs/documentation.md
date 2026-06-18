@@ -1,38 +1,42 @@
 ---
-title:  Documentation test
+title: Documentation
 ---
 
-# Welcome to My VuePress Documentation
+# Documentation
 
-This documentation aims to provide an overview of our project, explain how to get started, and offer guidance on common tasks.
+This page provides an overview of the project, how to get started, and pointers to
+the rest of the documentation.
 
 ## Getting Started
 
-To get started with our project, follow these steps:
-
-1. **Installation**: First, install the project dependencies.
+1. **Installation**: Install the project dependencies.
 
     ```bash
     npm install
     ```
 
-2. **Development Server**: Start the development server.
+2. **Development Server**: Start the local development server.
 
     ```bash
-    npm run dev
+    npm run docs:dev
     ```
 
-3. **View in Browser**: Open your browser and navigate to [http://localhost:8080/](http://localhost:8080/) to view the project.
+3. **View in Browser**: Open your browser and navigate to
+   [http://localhost:8080/](http://localhost:8080/) to view the site.
 
-## Project Structure
+## Where to Go Next
 
-Our project follows a typical Vue.js project structure:
+- [Guide](./guide/) — setup and project structure.
+- [Frontend Guide](./guide/frontend.md) — frontend concepts.
+- [Backend Guide](./guide/backend.md) — backend concepts.
+- [JavaScript Reference](./JavaScript/) — JavaScript topics from basics to advanced.
+- [About](./about.md) — about this project.
 
-## **New Heading
+## Linking Between Pages
 
+Some examples of internal links:
 
-[Home](/) <!-- Sends the user to the root README.md -->
-[foo](/foo/) <!-- Sends the user to index.html of directory foo -->
-[foo heading](./#heading) <!-- Anchors user to a heading in the foo README file -->
-[bar - three](../bar/three.md) <!-- You can append .md (recommended) -->
-[bar - four](../bar/four.html) <!-- Or you can append .html -->
+- `[Home](/)` — links to the root `README.md`.
+- `[Guide](/guide/)` — links to `guide/README.md`.
+- `[Frontend Guide](/guide/frontend.md)` — links to a specific page.
+- `[Heading anchor](./guide/#getting-started)` — links to a heading on another page.

@@ -1,0 +1,164 @@
+/* ==========================================================================
+   Dark mode for the VuePress default theme.
+   Activated when <html> has the "dark" class (toggled in enhanceApp.js).
+   ========================================================================== */
+
+/* Smooth transition when switching themes */
+body,
+.navbar,
+.sidebar,
+.theme-default-content
+  transition background-color .3s ease, color .3s ease, border-color .3s ease
+
+/* ---- Floating toggle button ---- */
+.dark-mode-toggle
+  position fixed
+  bottom 1.5rem
+  right 1.5rem
+  z-index 100
+  width 2.8rem
+  height 2.8rem
+  border-radius 50%
+  border 1px solid rgba(0, 0, 0, 0.12)
+  background-color #fff
+  font-size 1.25rem
+  line-height 1
+  cursor pointer
+  box-shadow 0 2px 10px rgba(0, 0, 0, 0.18)
+  display flex
+  align-items center
+  justify-content center
+  transition transform .2s ease, background-color .3s ease, box-shadow .3s ease
+
+.dark-mode-toggle:hover
+  transform scale(1.12)
+
+/* ==========================================================================
+   DARK THEME
+   ========================================================================== */
+html.dark
+  background-color #1b1b1f
+
+html.dark body
+  background-color #1b1b1f
+  color #c9ccd1
+
+/* ---- Navbar ---- */
+html.dark .navbar
+  background-color #202127
+  border-bottom-color #2c2d34
+
+html.dark .navbar .site-name
+  color #f3f4f6
+
+html.dark .navbar .links
+  background-color #202127
+
+html.dark .navbar .nav-item > a,
+html.dark .navbar .repo-link
+  color #c9ccd1
+
+html.dark .navbar .nav-item > a:hover,
+html.dark .navbar .nav-item > a.router-link-active
+  color #4abf8a
+
+/* Dropdown / search box */
+html.dark .navbar .search-box input
+  background-color #2c2d34
+  border-color #3a3b42
+  color #f3f4f6
+
+html.dark .navbar .suggestions
+  background-color #202127
+  border-color #3a3b42
+
+html.dark .navbar .suggestion.focused
+  background-color #2c2d34
+
+/* ---- Sidebar ---- */
+html.dark .sidebar
+  background-color #202127
+  border-right-color #2c2d34
+
+html.dark .sidebar-group .sidebar-heading
+  color #f3f4f6
+
+html.dark .sidebar-link
+  color #c9ccd1
+
+html.dark .sidebar-link:hover
+  color #4abf8a
+
+html.dark .sidebar-link.active
+  color #4abf8a
+  border-left-color #4abf8a
+
+/* ---- Main content ---- */
+html.dark .theme-default-content h1,
+html.dark .theme-default-content h2,
+html.dark .theme-default-content h3,
+html.dark .theme-default-content h4,
+html.dark .theme-default-content h5,
+html.dark .theme-default-content h6
+  color #f3f4f6
+
+html.dark .theme-default-content h1,
+html.dark .theme-default-content h2
+  border-bottom-color #2c2d34
+
+html.dark .theme-default-content a
+  color #4abf8a
+
+html.dark .theme-default-content strong
+  color #f3f4f6
+
+html.dark .theme-default-content p,
+html.dark .theme-default-content li,
+html.dark .theme-default-content td
+  color #c9ccd1
+
+/* Inline code (leave fenced code blocks with their default dark styling) */
+html.dark .theme-default-content :not(pre) > code
+  background-color #2c2d34
+  color #ff8fab
+
+/* Tables */
+html.dark .theme-default-content table
+  border-color #3a3b42
+
+html.dark .theme-default-content th,
+html.dark .theme-default-content td
+  border-color #3a3b42
+
+html.dark .theme-default-content tr
+  background-color #1b1b1f
+  border-top-color #3a3b42
+
+html.dark .theme-default-content tr:nth-child(2n)
+  background-color #25262c
+
+html.dark .theme-default-content th
+  background-color #202127
+
+/* Blockquotes (used for the Q&A callouts) */
+html.dark .theme-default-content blockquote
+  color #9aa0a6
+  border-left-color #4abf8a
+  background-color #202127
+
+/* Horizontal rules & dividers */
+html.dark hr
+  border-color #2c2d34
+
+html.dark .page-nav,
+html.dark .page-edit
+  border-top-color #2c2d34
+
+html.dark .page-nav .inner
+  border-top-color #2c2d34
+
+/* ---- Toggle button in dark mode ---- */
+html.dark .dark-mode-toggle
+  background-color #2c2d34
+  border-color #3a3b42
+  box-shadow 0 2px 10px rgba(0, 0, 0, 0.5)

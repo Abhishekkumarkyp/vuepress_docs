@@ -1,20 +1,20 @@
 ---
 home: true
 heroImage: /images/notebookLogo.webp
-heroText: Hello DoodleDwellers!
-tagline: Welcome to Doodle Press, Transforming Code into Knowledge
+heroText: Doodle Press
+tagline: Guides and references for frontend, backend, and JavaScript development
 actionText: Get Started →
 actionLink: /guide/
 features:
-- title: Simplicity First
-  details: Minimal setup with markdown-centered project structure helps you focus on writing.
-- title: Get Most Useful Code
-  details: Minimal setup with markdown-centered project structure helps you focus on writing.
-- title: Get Prompts To Generating Code
-  details: Minimal setup with markdown-centered project structure helps you focus on writing.
+- title: Frontend Guide
+  details: Practical notes on building and structuring frontend applications.
+- title: Backend Guide
+  details: Server-side concepts, setup, and best practices for backend development.
+- title: JavaScript Reference
+  details: A progressive JavaScript reference covering fundamentals through advanced topics.
 - title: Vue-Powered
   details: Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.
 - title: Performant
   details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
-footer: MIT Licensed | Copyright © 2024-present Abhishek Kumar
+footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
