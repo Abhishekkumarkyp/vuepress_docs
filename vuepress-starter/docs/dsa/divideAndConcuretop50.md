@@ -49,3 +49,7 @@
 | 44    | Divide and Conquer for Median of Arrays     | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/description/) |
 | 45    | Divide and Conquer for Balanced Binary Search Tree | [Balanced Binary Search Tree](https://leetcode.com/problems/balanced-binary-search-tree/description/) |
 | 46    | Find All Possible Subsets (Subset Generation) | [Subsets](https://leetcode.com/problems/subsets/description/)                        |
+| 47    | Knuth-Morris-Pratt (KMP) String Matching     | [KMP Pattern Matching](https://leetcode.com/problems/implement-strstr/description/)  |
+| 48    | Dynamic Programming and Divide and Conquer for Fibonacci | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/)        |
+| 49    | Fast Fourier Transform (FFT)                 | [Multiply Strings](https://leetcode.com/problems/multiply-strings/description/)      |
+| 50    | Quick Hull Algorithm for Convex Hull         | [Convex Hull](https://leetcode.com/problems/convex-hull/description/)               |

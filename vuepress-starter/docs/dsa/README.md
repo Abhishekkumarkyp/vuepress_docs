@@ -1,55 +1,70 @@
+---
+sidebarDepth: 2
+---
+# Data Structures & Algorithms (DSA)
 
-## Top 50 Most Asked Divide and Concure 
+A practical guide to core data structures and algorithms, with curated practice questions grouped by difficulty. Use this page as the starting point, then dive into the dedicated guides below for deeper explanations and code examples.
 
-| **#** | **Algorithm**                                | **LeetCode Problem**                                                                 |
-|-------|----------------------------------------------|--------------------------------------------------------------------------------------|
-| 1     | Binary Search                                | [Binary Search](https://leetcode.com/problems/binary-search/description/)            |
-| 2     | Merge Sort                                   | [Sort an Array](https://leetcode.com/problems/sort-an-array/description/)            |
-| 3     | Quick Sort                                   | [Sort an Array](https://leetcode.com/problems/sort-an-array/description/)            |
-| 4     | Find the Majority Element (Boyer-Moore Voting) | [Majority Element](https://leetcode.com/problems/majority-element/description/)      |
-| 5     | Closest Pair of Points                       | [Closest Point to Origin](https://leetcode.com/problems/closest-point-to-origin/description/) |
-| 6     | Binary Search Tree Operations                | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/description/) |
-| 7     | Karatsuba Multiplication                     | [Multiply Strings](https://leetcode.com/problems/multiply-strings/description/)      |
-| 8     | Merge K Sorted Lists                         | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/description/) |
-| 9     | Exponentiation by Squaring                   | [Pow(x, n)](https://leetcode.com/problems/powx-n/description/)                      |
-| 10    | QuickSelect (Find the Kth Smallest Element)  | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/description/) |
-| 11    | Find the Median of Two Sorted Arrays         | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/description/) |
-| 12    | Counting Inversions                          | [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/) |
-| 13    | Closest Pair of Points in 3D                 | No direct problem on LeetCode, refer to **Closest Point to Origin**.               |
-| 14    | Matrix Chain Multiplication                  | [Matrix Chain Multiplication](https://leetcode.com/problems/matrix-chain-multiplication/description/) (Dynamic Programming-based) |
-| 15    | Longest Common Subsequence (LCS)             | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/description/) |
-| 16    | Ternary Search                               | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/) |
-| 17    | Convex Hull (Graham Scan)                    | [Convex Hull](https://leetcode.com/problems/convex-hull/description/)               |
-| 18    | Merge Sort on Linked List                    | [Sort List](https://leetcode.com/problems/sort-list/description/)                   |
-| 19    | Matrix Exponentiation                        | [Pow(x, n)](https://leetcode.com/problems/powx-n/description/)                      |
-| 20    | Sieve of Eratosthenes                        | [Count Primes](https://leetcode.com/problems/count-primes/description/)             |
-| 21    | Trapping Rain Water                          | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/description/) |
-| 22    | Radix Sort                                   | No direct problem on LeetCode, refer to **Sort an Array** for sorting.             |
-| 23    | Optimal Binary Search Tree (OBST)            | [Binary Search Tree to Greater Sum Tree](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/description/) |
-| 24    | Longest Increasing Subsequence (LIS)         | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/description/) |
-| 25    | Fractional Knapsack                          | [Fractional Knapsack](https://leetcode.com/problems/fractional-knapsack/description/) |
-| 26    | Strassen’s Matrix Multiplication             | No direct problem, but look for **Matrix Multiplication** in **#318**.              |
-| 27    | Closest Pair of Points Using Divide and Conquer | [Closest Point to Origin](https://leetcode.com/problems/closest-point-to-origin/description/) |
-| 28    | QuickSort Median of Three Partitioning       | [Sort an Array](https://leetcode.com/problems/sort-an-array/description/)            |
-| 29    | Topological Sort Using DFS                   | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/description/) |
-| 30    | Counting Triangles in a Graph                | [Triangle Counting](https://leetcode.com/problems/triangle-counting/description/) (similar graph-based problem) |
-| 31    | Binary Indexed Tree (Fenwick Tree)           | [Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/description/) |
-| 32    | Knapsack Problem (Divide and Conquer with Dynamic Programming) | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/) |
-| 33    | Matrix Multiplication                        | [Multiply Strings](https://leetcode.com/problems/multiply-strings/description/)     |
-| 34    | Longest Palindromic Substring                | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/description/) |
-| 35    | Merge Sort for Linked List                   | [Sort List](https://leetcode.com/problems/sort-list/description/)                   |
-| 36    | Kth Largest Element Using QuickSelect       | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/description/) |
-| 37    | Find Median of Unsorted Array               | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/description/) |
-| 38    | Convex Hull (QuickHull)                     | No direct problem, refer to **Convex Hull**.                                       |
-| 39    | Longest Common Subsequence (LCS) with Dynamic Programming | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/description/) |
-| 40    | Divide and Conquer for Maximum Subarray Problem | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description/)      |
-| 41    | Meeting in the Middle (Subset Sum)          | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/) |
-| 42    | Dynamic Programming with Divide and Conquer (Longest Palindromic Subsequence) | [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/description/) |
-| 43    | D&C for Convex Hull (Graham Scan)           | [Convex Hull](https://leetcode.com/problems/convex-hull/description/)               |
-| 44    | Divide and Conquer for Median of Arrays     | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/description/) |
-| 45    | Divide and Conquer for Balanced Binary Search Tree | [Balanced Binary Search Tree](https://leetcode.com/problems/balanced-binary-search-tree/description/) |
-| 46    | Find All Possible Subsets (Subset Generation) | [Subsets](https://leetcode.com/problems/subsets/description/)                        |
-| 47    | Knuth-Morris-Pratt (KMP) String Matching     | [KMP Pattern Matching](https://leetcode.com/problems/implement-strstr/description/)  |
-| 48    | Dynamic Programming and Divide and Conquer for Fibonacci | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/)        |
-| 49    | Fast Fourier Transform (FFT)                 | [Multiply Strings](https://leetcode.com/problems/multiply-strings/description/)      |
-| 50    | Quick Hull Algorithm for Convex Hull         | [Convex Hull](https://leetcode.com/problems/convex-hull/description/)               |
+## Guides
+
+- [Sorting Algorithms](./sortingAlgorithms.md) — Merge, Quick, Bubble, Selection, Insertion, Heap, Counting, and Radix sort with complexity analysis and Python examples.
+- [Divide and Conquer — Top 50](./divideAndConcuretop50.md) — The 50 most frequently asked divide-and-conquer problems, mapped to their closest LeetCode equivalents.
+- [Algorithm Paradigms & Control Mechanisms](./questions.md) — Divide and Conquer vs. Dynamic Programming vs. Greedy, plus sequencing, selection, and iteration fundamentals.
+
+## How to Use the Practice Questions
+
+Work through the **Beginner** set first to build comfort with core data structures (arrays, strings, hash maps, linked lists) before moving to the **Intermediate** set, which introduces multi-pointer techniques, trees, graphs, and dynamic programming. Each question links to its LeetCode page and lists the primary concept it tests.
+
+## Beginner Level Questions
+
+| **#** | **Question**                              | **Concept**                  | **LeetCode Problem** |
+|-------|--------------------------------------------|-------------------------------|-----------------------|
+| 1     | Two Sum                                    | Hash Map                      | [Two Sum](https://leetcode.com/problems/two-sum/description/) |
+| 2     | Reverse a String                           | Two Pointers                  | [Reverse String](https://leetcode.com/problems/reverse-string/description/) |
+| 3     | Valid Palindrome                           | Two Pointers / Strings        | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description/) |
+| 4     | Contains Duplicate                         | Hash Set                      | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/) |
+| 5     | Valid Parentheses                          | Stack                         | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/) |
+| 6     | Merge Two Sorted Lists                     | Linked List                   | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/description/) |
+| 7     | Remove Duplicates from Sorted Array        | Two Pointers                  | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/) |
+| 8     | Best Time to Buy and Sell Stock            | Sliding Window / Greedy       | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/) |
+| 9     | Climbing Stairs                            | Basic Dynamic Programming     | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/) |
+| 10    | Binary Search                              | Binary Search                 | [Binary Search](https://leetcode.com/problems/binary-search/description/) |
+| 11    | Valid Anagram                              | Hash Map                      | [Valid Anagram](https://leetcode.com/problems/valid-anagram/description/) |
+| 12    | Missing Number                             | Math / Bit Manipulation       | [Missing Number](https://leetcode.com/problems/missing-number/description/) |
+| 13    | Move Zeroes                                | Two Pointers                  | [Move Zeroes](https://leetcode.com/problems/move-zeroes/description/) |
+| 14    | Single Number                              | Bit Manipulation              | [Single Number](https://leetcode.com/problems/single-number/description/) |
+| 15    | Majority Element                           | Boyer-Moore Voting            | [Majority Element](https://leetcode.com/problems/majority-element/description/) |
+| 16    | Linked List Cycle                          | Fast & Slow Pointers          | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/description/) |
+| 17    | Reverse Linked List                        | Linked List                   | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/) |
+| 18    | Maximum Depth of Binary Tree               | Trees / DFS                   | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/) |
+| 19    | Fibonacci Number                           | Recursion / DP                | [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/description/) |
+| 20    | Find the Index of the First Occurrence in a String | String Matching        | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/) |
+
+## Intermediate Level Questions
+
+| **#** | **Question**                                          | **Concept**                     | **LeetCode Problem** |
+|-------|--------------------------------------------------------|-----------------------------------|-----------------------|
+| 1     | Longest Substring Without Repeating Characters          | Sliding Window                    | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/) |
+| 2     | 3Sum                                                    | Two Pointers / Sorting            | [3Sum](https://leetcode.com/problems/3sum/description/) |
+| 3     | Group Anagrams                                          | Hash Map                          | [Group Anagrams](https://leetcode.com/problems/group-anagrams/description/) |
+| 4     | Product of Array Except Self                            | Prefix / Suffix Products          | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description/) |
+| 5     | Binary Tree Level Order Traversal                       | BFS / Trees                       | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/description/) |
+| 6     | Kth Largest Element in an Array                         | Heap / QuickSelect                | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/description/) |
+| 7     | Course Schedule                                         | Graph / Topological Sort          | [Course Schedule](https://leetcode.com/problems/course-schedule/description/) |
+| 8     | Coin Change                                             | Dynamic Programming               | [Coin Change](https://leetcode.com/problems/coin-change/description/) |
+| 9     | Longest Increasing Subsequence                          | Dynamic Programming               | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/description/) |
+| 10    | Search in Rotated Sorted Array                          | Modified Binary Search            | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/) |
+| 11    | Maximum Subarray (Kadane's Algorithm)                   | Dynamic Programming / Greedy      | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description/) |
+| 12    | Word Search                                             | Backtracking / DFS                | [Word Search](https://leetcode.com/problems/word-search/description/) |
+| 13    | Number of Islands                                       | Graph / BFS-DFS                   | [Number of Islands](https://leetcode.com/problems/number-of-islands/description/) |
+| 14    | Validate Binary Search Tree                             | Trees                             | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/description/) |
+| 15    | Top K Frequent Elements                                 | Heap / Hash Map                   | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/description/) |
+| 16    | Subsets                                                 | Backtracking                      | [Subsets](https://leetcode.com/problems/subsets/description/) |
+| 17    | Permutations                                            | Backtracking                      | [Permutations](https://leetcode.com/problems/permutations/description/) |
+| 18    | House Robber                                            | Dynamic Programming               | [House Robber](https://leetcode.com/problems/house-robber/description/) |
+| 19    | Combination Sum                                         | Backtracking                      | [Combination Sum](https://leetcode.com/problems/combination-sum/description/) |
+| 20    | Clone Graph                                             | Graph / DFS-BFS                   | [Clone Graph](https://leetcode.com/problems/clone-graph/description/) |
+
+## Top 50 Most Asked Divide and Conquer Problems
+
+See the full list on the [Divide and Conquer — Top 50](./divideAndConcuretop50.md) page.

@@ -472,3 +472,5 @@ Debounce waits for a pause then fires once; throttle fires at most once per inte
 6. **Build something small** — a real project you can talk about beats any amount of memorized trivia.
 
 Good luck — if you understand every topic across these three pages, you're ready for basic, intermediate, and most senior JavaScript interviews.
+
+Next: [DSA Practice in JavaScript](./dsa-practice.md) — classic coding problems solved with the concepts from all three pages, grouped by difficulty.
